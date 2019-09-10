@@ -1,10 +1,15 @@
 import React from 'react';
+import Home from '../Home/Home'
+import { Route, Switch, Redirect} from 'react-router-dom';
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>iSearch</h1>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Redirect to="/"/>
+      </Switch>
     </div>
   );
 }
