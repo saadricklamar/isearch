@@ -1,4 +1,22 @@
-.about-link {
+header {
+    display: flex;
+    justify-content: space-between
+}
+
+h1 {
+    margin: 5% auto;
+    font-size: 3rem;
+    color:#0BCBFC; 
+}
+
+nav {
+    padding-top: 2%;
+    
+}
+
+.aboutLink {
     color: white;
     text-decoration: none;
+    padding-right: 50%;
+    font-size: 1.5em;
 }

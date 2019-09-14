@@ -6,7 +6,7 @@ const Home = () => {
     <header>
         <h1>iSearch</h1>
         <nav>
-            <Link className="about-link" to="/About">
+            <Link className="aboutLink" to="/About">
             About
             </Link>
         </nav>
