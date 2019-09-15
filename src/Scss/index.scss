@@ -1,6 +1,7 @@
 @import url("../Components/App/App.scss");
 @import url("../Components/Home/Home.scss");
 @import url("../Components/About/About.scss");
+@import url("../Components/Search/Search.scss");
 
 body {
   margin: 0;
@@ -9,9 +10,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
