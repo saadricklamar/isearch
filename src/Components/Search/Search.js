@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Search = () => {
+const Search = (props) => {
     return(
-        <input placeholder="Search iTunes..."></input>
+        <input 
+            type="text"
+            placeholder="Search iTunes..." 
+            onChange={props.grabUserInput}
+        />
     )
-}
+} 
 
 export default Search; 
