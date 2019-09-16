@@ -6,8 +6,13 @@ export class Home extends Component  {
     constructor() {
         super();
         this.state = {
+            userInput: ""
 
         }
+    }
+
+    grabUserInput = e => {
+        this.setState({ userInput: e.target.value })
     }
     
 
@@ -25,7 +30,7 @@ export class Home extends Component  {
                     </Link>
                 </nav>
             </header>
-            <Search />
+            <Search grabUserInput={this.grabUserInput} />
             </div>
 
             )
