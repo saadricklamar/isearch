@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Search from '../Search/Search'
+import Search from '../Search/Search';
+import { cleanUserInput } from '../../Utilities/cleanUserInput';
 
 export class Home extends Component  {
     constructor() {
         super();
         this.state = {
-            userInput: ""
+           userInput: ""
 
         }
     }
 
     grabUserInput = e => {
-        this.setState({ userInput: e.target.value })
+        let cleanedInput = cleanUserInput(e.target.value);
+        this.setState({ userInput: cleanedInput });
     }
     
 
@@ -20,6 +22,7 @@ export class Home extends Component  {
 
 
     render () {
+        console.log(this.state.userInput)
         return(
             <div>
             <header>
