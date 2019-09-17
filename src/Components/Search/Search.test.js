@@ -6,5 +6,10 @@ describe("Search", () => {
     let wrapper = shallow(<Search/>)
     it('should match the snapshot', () => {
         expect(wrapper).toMatchSnapshot();
-    })
+    });
+    it('should accept user inputs', () => {
+        wrapper.find('input').simulate('change', {
+            target: { value: 'Jack Johnson'}
+        })
+    });
 })
