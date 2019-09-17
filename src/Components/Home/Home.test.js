@@ -6,5 +6,9 @@ describe('Home', () => {
     let wrapper = shallow(<Home/>)
     it('should match the snapshot', () => {
         expect(wrapper).toMatchSnapshot();
-    })
+    });
+    it('should set state with user inpur', () => {
+        wrapper.setState({ userInput: 'Jack Johnson'})
+        expect(wrapper.state('userInput')).toEqual('Jack Johnson')
+    });
 })
