@@ -17,6 +17,10 @@ export class Home extends Component  {
         this.setState({ userInput: cleanedInput });
     }
     
+    fetchItunes = e => {
+        e.preventDefault();
+        console.log('this click event is working')
+    }
 
 
 
@@ -33,7 +37,7 @@ export class Home extends Component  {
                     </Link>
                 </nav>
             </header>
-            <Search grabUserInput={this.grabUserInput} />
+            <Search grabUserInput={this.grabUserInput} fetchItunes={this.fetchItunes} />
             </div>
 
             )
