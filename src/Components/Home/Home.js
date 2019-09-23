@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 import Search from '../Search/Search';
 import { cleanUserInput } from '../../Utilities/cleanUserInput';
 
+
 export class Home extends Component  {
     constructor() {
         super();
         this.state = {
-           userInput: ""
+           userInput: "",
+           results: [],
+           error: ""
 
         }
     }
@@ -19,13 +22,16 @@ export class Home extends Component  {
     
     fetchItunes = e => {
         e.preventDefault();
+        fetch(`https://itunes.apple.com/search?term=${this.state.userInput}`)
+        .then(response => response.json())
+        .then(data => this.setState({ results: data.results}))
+        .catch(error => this.setState({ error }))
     }
 
 
 
 
     render () {
-        console.log(this.state.userInput)
         return(
             <div>
             <header>
