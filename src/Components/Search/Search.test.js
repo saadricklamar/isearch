@@ -12,4 +12,7 @@ describe("Search", () => {
             target: { value: 'Jack Johnson'}
         })
     });
+    it('creates a click event when the button is clicked', () => {
+        wrapper.find('button').simulate('click');
+    })
 })

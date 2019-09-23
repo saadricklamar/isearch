@@ -19,7 +19,6 @@ export class Home extends Component  {
     
     fetchItunes = e => {
         e.preventDefault();
-        console.log('this click event is working')
     }
 
 
