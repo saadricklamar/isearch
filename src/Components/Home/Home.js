@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Search from '../Search/Search';
 import { cleanUserInput } from '../../Utilities/cleanUserInput';
+import { fetchFromITunes } from '../../Utilities/apiCalls';
 
 
 export class Home extends Component  {
@@ -20,18 +21,17 @@ export class Home extends Component  {
         this.setState({ userInput: cleanedInput });
     }
     
-    fetchItunes = e => {
+    fetchITunes = async e => {
         e.preventDefault();
-        fetch(`https://itunes.apple.com/search?term=${this.state.userInput}`)
-        .then(response => response.json())
-        .then(data => this.setState({ results: data.results}))
-        .catch(error => this.setState({ error }))
+        let data = await fetchFromITunes(this.state.userInput);
+        this.setState({ results: data.results})
     }
 
 
 
 
     render () {
+        console.log(this.state.results)
         return(
             <div>
             <header>
@@ -42,7 +42,7 @@ export class Home extends Component  {
                     </Link>
                 </nav>
             </header>
-            <Search grabUserInput={this.grabUserInput} fetchItunes={this.fetchItunes} />
+            <Search grabUserInput={this.grabUserInput} fetchITunes={this.fetchITunes} />
             </div>
 
             )
