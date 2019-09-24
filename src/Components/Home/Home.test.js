@@ -26,4 +26,8 @@ describe('Home', () => {
         fetchFromITunes('JackJohnson');
         expect(fetch).toHaveBeenCalledWith(mockUrl);
     });
+    it("should return the correct data", async () => {
+        const result = await fetchFromITunes('JackJohnson');
+        expect(result).toEqual(mockData);
+      });
 })
