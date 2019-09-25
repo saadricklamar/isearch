@@ -18,16 +18,28 @@ describe('Home', () => {
     it('should match the snapshot', () => {
         expect(wrapper).toMatchSnapshot();
     });
-    it('should set state with user inpur', () => {
+    it('should set state with user input', () => {
         wrapper.setState({ userInput: 'Jack Johnson'})
         expect(wrapper.state('userInput')).toEqual('Jack Johnson')
     });
-    it("calls fetch with the correct params", () => {
+    it('calls fetch with the correct params', () => {
         fetchFromITunes('JackJohnson');
         expect(fetch).toHaveBeenCalledWith(mockUrl);
     });
-    it("should return the correct data", async () => {
+    it('should return the correct data', async () => {
         const result = await fetchFromITunes('JackJohnson');
         expect(result).toEqual(mockData);
+    });
+    it('should throw an error if the response is not ok', async () => {
+        window.fetch = jest.fn().mockImplementationOnce(() =>
+          Promise.resolve({
+            ok: false
+          })
+        );
+        try {
+          await fetchFromITunes('JackJohnson');
+        } catch (error) {
+          expect(error.message).toBe("Failed to fetch ITunes data");
+        }
       });
 })
