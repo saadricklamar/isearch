@@ -31,7 +31,6 @@ export class Home extends Component  {
 
 
     render () {
-        console.log(this.state.results)
         return(
             <div>
             <header>
@@ -44,10 +43,7 @@ export class Home extends Component  {
             </header>
             <Search grabUserInput={this.grabUserInput} fetchITunes={this.fetchITunes} />
             </div>
-
             )
-
-
     }
    
 }
