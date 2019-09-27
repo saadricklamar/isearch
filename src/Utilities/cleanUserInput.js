@@ -1,4 +1,4 @@
 export const cleanUserInput = userInput => {
-    let newString = userInput.replace(" ", "")
-    return newString;
+  let newString = userInput.replace(" ", "");
+  return newString;
 };

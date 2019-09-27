@@ -1,8 +1,7 @@
-import React from 'react';
-import Home from '../Home/Home';
-import About from '../About/About';
-import { Route, Switch, Redirect} from 'react-router-dom';
-
+import React from "react";
+import Home from "../Home/Home";
+import About from "../About/About";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 const App = () => {
   return (
@@ -10,10 +9,10 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exapct path="/About" component={About} />
-        <Redirect to="/"/>
+        <Redirect to="/" />
       </Switch>
     </div>
   );
-}
+};
 
 export default App;
