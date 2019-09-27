@@ -32,7 +32,7 @@ export class Home extends Component  {
 
     render () {
         return(
-            <div>
+            <div className="home">
             <header>
                 <h1 className="h1">iSearch</h1>
                 <nav>
