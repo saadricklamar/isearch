@@ -34,7 +34,7 @@ export class Home extends Component  {
         return(
             <div className="home">
             <header>
-                <h1 className="h1">iSearch</h1>
+                <h1 className="h1"><span>i</span>Search</h1>
                 <nav>
                     <Link className="about-link" to="/About">
                     About

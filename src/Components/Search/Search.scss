@@ -1,9 +1,9 @@
 form {
     display: flex;
     flex-direction: row;
-    border: 5px solid grey;
+    border: 5px solid white;
     width: 50%;
-    margin: 0 auto;
+    margin: 5% auto;
     border-radius: 5px;
 }
 
@@ -18,9 +18,8 @@ input {
 }
 
 button {
-    background: grey;
+    background: #287D8C;
     width: 15%;
-    border: none;
     color: white;
     font-size: 1rem;
     border-radius: 1px;
@@ -28,5 +27,6 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: #0BCBFC;
+    background-color: #F6A026;
+    color: black;
 }
