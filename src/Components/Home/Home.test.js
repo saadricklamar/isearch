@@ -3,6 +3,7 @@ import { shallow } from "enzyme";
 import Home from "./Home";
 import { fetchFromITunes } from "../../Utilities/apiCalls";
 import { mockData } from "../../Utilities/mockData";
+import { Link, MemoryRouter, Route} from 'react-router';
 
 describe("Home", () => {
   let mockUrl;
@@ -42,5 +43,8 @@ describe("Home", () => {
     } catch (error) {
       expect(error.message).toBe("Failed to fetch ITunes data");
     }
+  });
+  it('renders component with associated path when About is clicked', () => {
+    expect(wrapper.find('Link').prop('to')).toEqual('/About');
   });
 });
