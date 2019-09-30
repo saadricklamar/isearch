@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
 import Music from "../Music/Music";
+import Movies from "../Movies/Movies";
 import { cleanUserInput } from "../../Utilities/cleanUserInput";
 import { fetchFromITunes } from "../../Utilities/apiCalls";
 
@@ -44,6 +45,7 @@ export class Home extends Component {
           fetchITunes={this.fetchITunes}
         />
         <Music/>
+        <Movies/>
       </div>
     );
   }
