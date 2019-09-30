@@ -31,7 +31,7 @@ export class Home extends Component {
   render() {
     return (
       <div className="home">
-        <header>
+        <header className="home-header">
           <h1 className="h1">
             <span>i</span>Search
           </h1>

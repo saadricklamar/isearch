@@ -8,7 +8,21 @@
   height: 100vh;
 }
 
+.about-header {
+  display: flex;
+}
+
 h2 {
   margin: 0 auto;
   color: white;
+}
+
+.go-home {
+  color: white;
+  font-size: 3rem;
+  margin: 2%;
+}
+
+.go-home:hover {
+  color: hotpink;
 }
