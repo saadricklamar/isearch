@@ -1,4 +1,4 @@
-const mockData = {
+const mockData = [{
   artistId: 909253,
   artistName: "Jack Johnson",
   artistViewUrl: "https://music.apple.com/us/artist/jack-johnson/909253?uo=4",
@@ -36,7 +36,7 @@ const mockData = {
   trackViewUrl:
     "https://music.apple.com/us/album/better-together/1440857781?i=1440857786&uo=4",
   wrapperType: "track"
-};
+}];
 
 module.exports = {
   mockData
