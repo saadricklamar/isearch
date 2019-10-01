@@ -29,6 +29,7 @@ export class Home extends Component {
   };
 
   render() {
+    console.log(this.state.results);
     return (
       <div className="home">
         <header className="home-header">
@@ -45,9 +46,11 @@ export class Home extends Component {
           grabUserInput={this.grabUserInput}
           fetchITunes={this.fetchITunes}
         />
-        <Music/>
-        <Movies/>
-        <Television/>
+        <section className="displayed-results">
+          <Music results={this.state.results} />
+          <Movies />
+          <Television />
+        </section>
       </div>
     );
   }
