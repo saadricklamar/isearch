@@ -7,7 +7,7 @@ const Music = props => {
       {props.results.map(item => {
         if (item.kind === "song") {
           return (
-            <a href={item.trackViewUrl} target="_blank">
+            <a href={item.trackViewUrl} target="_blank" key={item.trackId}>
               <article className="music-card">
                 <img
                   src={item.artworkUrl100}
