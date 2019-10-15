@@ -48,8 +48,8 @@ export class Home extends Component {
         />
         <section className="displayed-results">
           <Music results={this.state.results} />
-          <Movies results={this.state.results}/>
-          <Television />
+          <Movies results={this.state.results} />
+          <Television results={this.state.results} />
         </section>
       </div>
     );

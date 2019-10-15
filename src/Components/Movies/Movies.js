@@ -5,7 +5,7 @@ const Movies = props => {
   return (
     <section>
       <h3>Movies</h3>
-      <ListGroup className="music-list">
+      <ListGroup className="list">
         {props.results.map(item => {
           if (item.kind === "feature-movie") {
             return (
