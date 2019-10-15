@@ -1,27 +1,21 @@
 import React from "react";
+import { ListGroup } from "react-bootstrap";
 
 const Music = props => {
   return (
-    <section className="music-list">
+    <section>
       <h3>Music</h3>
-      {props.results.map(item => {
-        if (item.kind === "song") {
-          return (
-            <a href={item.trackViewUrl} target="_blank" key={item.trackId}>
-              <article className="music-card">
-                <img
-                  src={item.artworkUrl100}
-                  alt="album cover"
-                  className="album-cover"
-                ></img>
-                <p>Song:{item.trackName}</p>
-                <p>Album:{item.collectionName}</p>
-                <p>Artist: {item.artistName} </p>
-              </article>
-            </a>
-          );
-        }
-      })}
+      <ListGroup className="music-list">
+        {props.results.map(item => {
+          if (item.kind === "song") {
+            return (
+              <ListGroup.Item variant="info" className="track-name">
+                {item.trackName}
+              </ListGroup.Item>
+            );
+          }
+        })}
+      </ListGroup>
     </section>
   );
 };
