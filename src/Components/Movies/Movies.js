@@ -1,10 +1,21 @@
 import React from "react";
+import { ListGroup } from "react-bootstrap";
 
-const Movies = () => {
+const Movies = props => {
   return (
     <section>
       <h3>Movies</h3>
-      <p>This section will contain Movies related to your search</p>
+      <ListGroup className="music-list">
+        {props.results.map(item => {
+          if (item.kind === "feature-movie") {
+            return (
+              <ListGroup.Item variant="info" className="track-name">
+                {item.trackName}
+              </ListGroup.Item>
+            );
+          }
+        })}
+      </ListGroup>
     </section>
   );
 };
