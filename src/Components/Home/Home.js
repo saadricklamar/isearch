@@ -48,7 +48,7 @@ export class Home extends Component {
         />
         <section className="displayed-results">
           <Music results={this.state.results} />
-          <Movies />
+          <Movies results={this.state.results}/>
           <Television />
         </section>
       </div>
