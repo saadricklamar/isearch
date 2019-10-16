@@ -1,24 +1,40 @@
 h3,
-a,
-p {
+a {
   color: white;
-  text-align: left;
   margin-left: 5%;
   padding-bottom: 2%;
+  text-align: left;
+}
+
+h3 {
   text-decoration: underline;
 }
 
 .list {
-  width: 70%;
   margin-left: 5%;
   padding-bottom: 5%;
+  width: 60%;
 }
 
 .track-name {
+  clear: left;
+  height: 140px;
   text-align: left;
 }
 
 .track-name:hover {
   background-color: #f6a026;
   cursor: pointer;
+}
+
+img {
+  float: right;
+  height: 100px;
+  width: 100px;
+}
+
+.item {
+  color: #287d8c;
+  margin: 0;
+  padding: 0;
 }
