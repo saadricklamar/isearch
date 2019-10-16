@@ -9,9 +9,15 @@ const Music = props => {
         {props.results.map(item => {
           if (item.kind === "song") {
             return (
-              <ListGroup.Item variant="info" className="track-name">
-                {item.trackName}
-              </ListGroup.Item>
+              <a href={item.trackViewUrl} target="_blank">
+                <ListGroup.Item variant="info" className="track-name">
+                  <img src={item.artworkUrl100} alt="Album Cover"></img>
+                  <p className="item">Song: {item.trackName} </p>
+                  <p className="item">Artist: {item.artistName} </p>
+                  <p className="item">Album Price: ${item.collectionPrice}</p>
+                  <p className="item">Track Price: ${item.trackPrice}</p>
+                </ListGroup.Item>
+              </a>
             );
           }
         })}
