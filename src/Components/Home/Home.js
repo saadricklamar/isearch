@@ -36,6 +36,9 @@ export class Home extends Component {
             <span>i</span>Search
           </h1>
           <nav>
+            <Link className="favorites-link" to="/Favorites">
+              Favorites
+            </Link>
             <Link className="about-link" to="/About">
               About
             </Link>
@@ -46,7 +49,7 @@ export class Home extends Component {
           fetchITunes={this.fetchITunes}
         />
         <section className="displayed-results">
-          <Music results={this.state.results} className="music"/>
+          <Music results={this.state.results} className="music" />
           <Movies results={this.state.results} />
           <Television results={this.state.results} />
         </section>
