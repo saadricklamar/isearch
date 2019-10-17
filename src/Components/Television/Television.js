@@ -9,9 +9,15 @@ const Television = props => {
         {props.results.map(item => {
           if (item.kind === "tv-episode") {
             return (
-              <ListGroup.Item variant="info" className="track-name">
-                {item.trackName}
-              </ListGroup.Item>
+              <a href={item.trackViewUrl} target="_blank">
+                <ListGroup.Item variant="primary" className="television">
+                  <img src={item.artworkUrl100} alt="Television Poster"></img>
+                  <p className="item">Show: {item.artistName} </p>
+                  <p className="item">Episode: {item.trackName} </p>
+                  <p className="item">Buy: ${item.collectionPrice}</p>
+                  <p className="item">Rent ${item.trackPrice}</p>
+                </ListGroup.Item>
+              </a>
             );
           }
         })}
