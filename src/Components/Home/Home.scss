@@ -3,7 +3,8 @@ html {
 }
 
 .home {
-  background: url(../../Assets/Mac.jpeg) no-repeat center center fixed;
+  background: url(../../Assets/Mac-About-Page.jpeg) no-repeat center center
+    fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -14,12 +15,12 @@ html {
 .home-header {
   display: flex;
   justify-content: space-between;
-  background-color: #287d8c;
+  background-color: #c32266;
   height: 6%;
 }
 
 span {
-  color: #f6a026;
+  color: #6b08fc;
 }
 
 h1 {
@@ -45,9 +46,9 @@ nav {
 }
 
 .about-link:hover {
-  color: #f6a026;
+  color: #6b08fc;
 }
 
 .favorites-link:hover {
-  color: #f6a026;
+  color: #6b08fc;
 }
