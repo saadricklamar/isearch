@@ -8,7 +8,7 @@ const Search = props => {
         placeholder="Search iTunes..."
         onChange={props.grabUserInput}
       />
-      <button onClick={props.fetchITunes}>Submit</button>
+      <button onClick={props.fetchITunes}>Search</button>
     </form>
   );
 };
