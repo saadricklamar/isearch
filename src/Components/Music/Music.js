@@ -15,7 +15,7 @@ const Music = props => {
           if (item.kind === "song") {
             return (
               <a href={item.trackViewUrl} target="_blank">
-                <ListGroup.Item variant="info" className="track">
+                <ListGroup.Item variant="danger" className="track">
                   <img src={item.artworkUrl100} alt="Album Cover"></img>
                   <p className="item">Song: {item.trackName} </p>
                   <p className="item">Artist: {item.artistName} </p>

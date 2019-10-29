@@ -48,11 +48,13 @@ export class Home extends Component {
           grabUserInput={this.grabUserInput}
           fetchITunes={this.fetchITunes}
         />
-        <section className="displayed-results">
-          <Music results={this.state.results} className="music" />
-          <Movies results={this.state.results} />
-          <Television results={this.state.results} />
-        </section>
+        {!this.state.results.length ? <p></p> : 
+          (<section className="displayed-results">
+            <Music results={this.state.results} className="music" />
+            <Movies results={this.state.results} />
+            <Television results={this.state.results} />
+          </section>)
+        }
       </div>
     );
   }
